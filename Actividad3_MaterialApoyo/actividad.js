@@ -41,14 +41,10 @@ function ejemplo() {
 function redConverter() {
     let outputPath = 'output/tucan_red.jpg';
     let pixels = handler.getPixels();
-
-    // Ensure that pixels array is not undefined
     if (pixels) {
         for (let i = 0; i < pixels.length; i++) {
-            // Ensure that pixels[i] is not undefined
             if (pixels[i]) {
                 for (let j = 0; j < pixels[i].length; j++) {
-                    // Ensure that pixels[i][j] is not undefined
                     if (pixels[i][j]) {
                         pixels[i][j][1] = 0;
                         pixels[i][j][2] = 0;
@@ -293,7 +289,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 9;
+let optionN = 8;
 
 switch (optionN) {
     case 1: redConverter(); break;
